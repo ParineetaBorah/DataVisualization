@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  </head>
+  <body>
+    <!-- Add your site or application content here -->
+    <div class="bubble-chart" style="display: block">
+      <h2 class="header">
+        Bubble Chart Displaying Various Sectors of Different Companies
+      </h2>
+      <div class="year-filter" id="year"></div>
+      <div style="display: flex; align-items: center">
+        <div id="viz"></div>
+        <div id="legend">Legend</div>
+      </div>
+    </div>
+    <div class="donut-chart" style="display: none">
+      <h2 class="header">
+        Donut Chart Displaying Market Cap of Companies Within the Sector
+      </h2>
+      <div style="display: flex; align-items: center">
+        <div id="viz2" class="pie-chart-wrapper"></div>
+        <div id="pie-legend">Legend</div>
+      </div>
+      <div class="btn-wrapper">
+        <button id="showBubbleChart" class="button2">Go To Bubble Chart</button>
+      </div>
+    </div>
+
+    <footer>
+      <strong>Data Processing:</strong>
+      Data are collected manually from the Yahoo finance website(<a
+        href="https://finance.yahoo.com/sectors/"
+        target="_blank"
+      >
+        https://finance.yahoo.com/sectors/</a
+      >), CompaniesMarketCap website(<a
+        href="https://companiesmarketcap.com"
+        target="_blank"
+        >https://companiesmarketcap.com/</a
+      >) and Dow Jones financial dataset provided on KEATS. The data is taken
+      for the years 2016 to 2018. Companies are grouped with respect to their
+      sectors. Individual companies and sectors are analysed according to their
+      earnings and market cap. Data aggregation and manipulation is performed
+      using python.
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
